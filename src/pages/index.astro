@@ -37,7 +37,7 @@ import "../styles/global.css";
     <Footer />
 
     <script>
-      // Scroll reveal observer
+      // Fade-in reveal on scroll — each element appears gradually
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -47,9 +47,9 @@ import "../styles/global.css";
             }
           });
         },
-        { root: null, rootMargin: "0px 0px -8% 0px", threshold: 0.05 }
+        { root: null, rootMargin: "0px 0px -60px 0px", threshold: 0.01 }
       );
-      document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale, .skill-reveal, .bullet-reveal").forEach((el) => observer.observe(el));
+      document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>

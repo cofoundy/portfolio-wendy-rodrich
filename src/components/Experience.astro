@@ -6,13 +6,13 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 {hasExperience && (
   <section id="experience" class="py-12 md:py-16 bg-white">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
-      <div class="mb-10 reveal-left">
+      <div class="mb-10 fade-in">
         <h2 class="text-3xl md:text-4xl font-bold" style={`color: ${siteConfig.accentColor}`}>Experience</h2>
         <div class="w-16 h-1 mt-3 rounded-full" style={`background-color: ${siteConfig.highlightColor}`}></div>
       </div>
 
       <!-- Horizontal Timeline (Desktop) -->
-      <div class="hidden md:block relative mb-8 reveal stagger-1">
+      <div class="hidden md:block relative mb-8 fade-in" style="transition-delay: 100ms">
         <div class="absolute top-4 left-0 right-0 h-0.5 timeline-line" style={`background-color: ${siteConfig.accentColor}30`}></div>
         <div class="flex justify-between">
           {siteConfig.experience.map((exp, index) => (
@@ -35,8 +35,8 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         {siteConfig.experience.map((exp, index) => (
           <div
-            class={`reveal stagger-${index + 2} card-hover p-5 rounded-xl bg-gray-50`}
-            style={`border: 1px solid ${siteConfig.accentColor}12`}
+            class="fade-in card-hover p-5 rounded-xl bg-gray-50"
+            style={`border: 1px solid ${siteConfig.accentColor}12; transition-delay: ${index * 150}ms`}
           >
             <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3">
               <div>
@@ -49,7 +49,7 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
             </div>
             <ul class="space-y-1.5">
               {exp.bullets.map((bullet, bi) => (
-                <li class="bullet-reveal flex items-start text-sm text-gray-600" style={`transition-delay: ${(index * 200) + (bi * 100) + 300}ms`}>
+                <li class="fade-in flex items-start text-sm text-gray-600" style={`transition-delay: ${(index * 150) + (bi * 80) + 200}ms`}>
                   <span class="inline-block w-1.5 h-1.5 rounded-full mt-1.5 mr-2 flex-shrink-0" style={`background-color: ${siteConfig.highlightColor}`} />
                   <Fragment set:html={bullet} />
                 </li>
