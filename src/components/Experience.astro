@@ -48,8 +48,8 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
               </span>
             </div>
             <ul class="space-y-1.5">
-              {exp.bullets.map((bullet) => (
-                <li class="flex items-start text-sm text-gray-600">
+              {exp.bullets.map((bullet, bi) => (
+                <li class="bullet-reveal flex items-start text-sm text-gray-600" style={`transition-delay: ${(index * 200) + (bi * 100) + 300}ms`}>
                   <span class="inline-block w-1.5 h-1.5 rounded-full mt-1.5 mr-2 flex-shrink-0" style={`background-color: ${siteConfig.highlightColor}`} />
                   <Fragment set:html={bullet} />
                 </li>

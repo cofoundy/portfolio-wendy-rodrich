@@ -27,10 +27,10 @@ import { siteConfig } from "../config";
         Expertise
       </h3>
       <div class="flex flex-wrap gap-2">
-        {siteConfig.skills.map((skill) => (
+        {siteConfig.skills.map((skill, i) => (
           <span
-            class="skill-hover px-4 py-2 rounded-full text-sm font-medium cursor-default"
-            style={`background-color: ${siteConfig.accentColor}08; color: ${siteConfig.accentColor}; border: 1px solid ${siteConfig.accentColor}25`}
+            class="skill-reveal skill-hover px-4 py-2 rounded-full text-sm font-medium cursor-default"
+            style={`background-color: ${siteConfig.accentColor}08; color: ${siteConfig.accentColor}; border: 1px solid ${siteConfig.accentColor}25; transition-delay: ${i * 60}ms`}
           >
             {skill}
           </span>
