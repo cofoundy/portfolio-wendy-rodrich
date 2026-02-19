@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Wendy Rodrich",
-  title: "Entrepreneur & Aesthetic Specialist",
-  description: "Wendy Rodrich - Founder of IllaDerm Skin, entrepreneur in beauty, wellness, and AI-driven marketing. 17+ years in the beauty industry.",
+  title: "Multi-Brand Founder | Beauty, AI & Luxury E-Commerce",
+  description: "Wendy Rodrich - Multi-brand founder building scalable brands across the U.S. and Latin America. Beauty, AI marketing, and luxury e-commerce.",
 
   // 2-color system: soft lilac (brand) + champagne gold (CTAs)
   accentColor: "#7C6A8F",
@@ -14,34 +14,49 @@ export const siteConfig = {
     { value: "UPenn", label: "AI Certified" },
   ],
 
-  // Hero tagline (short, impactful)
-  tagline: "Building elevated brands at the intersection of beauty, wellness, and AI-driven innovation.",
+  // Hero tagline
+  tagline: "Building scalable brands across the U.S. and Latin America.",
+
+  // Location line
+  location: "Based in Florida, working across the U.S. and Latin America.",
+
+  // CTA
+  ctaText: "Open to partnerships, collaborations, and business opportunities.",
 
   social: {
     email: "Wenrodrich@outlook.com",
     linkedin: "https://www.linkedin.com/in/wenrodrich",
-    // instagram: "",
   },
 
   aboutMe:
-    "Bilingual entrepreneur and aesthetic specialist with over 17 years of experience in the beauty, wellness, and lifestyle industries. For the past decade, I have owned and operated a full-service spa in South Florida, managing everything from marketing strategy and brand development to client experience and team training. As the founder of <strong>IllaDerm Skin</strong>, I create results-driven, organic skincare formulations focused on personalized care and luxury client experiences. I am also developing a modern jewelry e-commerce brand, combining product design with digital strategy to build scalable lifestyle businesses. With certifications in AI from the <strong>University of Pennsylvania</strong>, I specialize in integrating AI-driven marketing and branding strategies to build modern, competitive brands.",
+    "Wendy Rodrich is a multi-brand entrepreneur and licensed esthetician with over 17 years of experience in the beauty and wellness industry.\n\nShe is the founder of <strong>IllaDerm Skin Corp</strong>, a Florida-based skincare brand and facial studio known for advanced treatments, loyal clientele, and premium service standards.\n\nWendy has built and operated successful beauty businesses in South Florida, combining hands-on expertise with strong business operations, marketing strategy, and brand development.\n\nShe is currently expanding into AI-driven marketing, e-commerce, and luxury product development, including the launch of <strong>AUREX Jewelry</strong>, a modern jewelry brand focused on accessible luxury and digital growth.\n\nWendy holds certifications in AI Marketing and Business Strategy and is focused on building scalable brands across the U.S. and Latin America.",
+
+  // Subtext below hero title
+  heroSubtext: "Entrepreneur and licensed esthetician with 17+ years of experience building and operating beauty and wellness businesses in South Florida. Founder of IllaDerm Skin Corp and upcoming luxury jewelry brand AUREX. Expanding into AI-driven marketing, e-commerce, and brand development.",
+
+  highlights: [
+    "17+ years in beauty & wellness",
+    "Founder of IllaDerm Skin Corp",
+    "Spa owner in South Florida",
+    "Experience in AI marketing & e-commerce",
+    "Launching AUREX Jewelry",
+    "Bilingual: English & Spanish",
+  ],
 
   skills: [
-    "Skincare Formulation",
-    "Aesthetic Treatments",
-    "AI Marketing",
-    "Brand Development",
+    "Brand Building",
+    "Skincare & Wellness",
     "E-Commerce",
-    "Digital Strategy",
-    "PRP & Micro Needling",
-    "Permanent Makeup",
-    "Client Experience",
+    "AI Marketing",
+    "Sales & Client Experience",
+    "Luxury Services",
+    "Product Development",
     "Business Operations",
   ],
 
   projects: [
     {
-      name: "IllaDerm Skin",
+      name: "IllaDerm Skin Corp",
       description: "Natural skincare and treatment brand focused on results-driven skin health, organic formulations, and elevated, personalized client care.",
       link: "",
       skills: ["Skincare", "Brand Building", "Organic Formulation"],
@@ -53,16 +68,16 @@ export const siteConfig = {
       skills: ["Spa Management", "Aesthetics", "Client Experience"],
     },
     {
-      name: "Jewelry E-Commerce",
-      description: "Modern jewelry e-commerce brand in development, combining product design, branding, and digital-first strategy for scalable growth.",
+      name: "AUREX Jewelry (Launching)",
+      description: "A modern luxury jewelry brand focused on accessible fine jewelry and e-commerce growth. Currently in development.",
       link: "",
-      skills: ["E-Commerce", "Product Design", "Digital Strategy"],
+      skills: ["E-Commerce", "Product Design", "Luxury"],
     },
   ],
 
   experience: [
     {
-      company: "IllaDerm Skin",
+      company: "IllaDerm Skin Corp",
       title: "Founder",
       dateRange: "2024 - Present",
       bullets: [
@@ -82,11 +97,11 @@ export const siteConfig = {
       ],
     },
     {
-      company: "Jewelry E-Commerce Brand",
+      company: "AUREX Jewelry",
       title: "Founder",
       dateRange: "2025 - Present",
       bullets: [
-        "Developing modern jewelry e-commerce brand with digital-first strategy",
+        "Developing modern luxury jewelry brand with digital-first e-commerce strategy",
         "Combining product design, branding, and scalable business model",
       ],
     },

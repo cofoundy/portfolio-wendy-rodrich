@@ -14,10 +14,12 @@ import { siteConfig } from "../config";
       </div>
 
       <!-- Bio -->
-      <div class="lg:col-span-9 fade-in" style="transition-delay: 150ms">
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          <Fragment set:html={siteConfig.aboutMe} />
-        </p>
+      <div class="lg:col-span-9 fade-in space-y-4" style="transition-delay: 150ms">
+        {siteConfig.aboutMe.split('\n\n').map((paragraph) => (
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+            <Fragment set:html={paragraph} />
+          </p>
+        ))}
       </div>
     </div>
 
