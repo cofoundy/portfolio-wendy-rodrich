@@ -1,0 +1,48 @@
+# DecapBridge PKCE auth configured
+backend:
+  name: git-gateway
+  repo: cofoundy/portfolio-wendy-rodrich
+  branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/SITE-ID-PLACEHOLDER/pkce
+  auth_token_endpoint: /sites/SITE-ID-PLACEHOLDER/token
+  gateway_url: https://gateway.decapbridge.com
+
+# See who did what
+commit_messages:
+  create: Create {{collection}} "{{slug}}" - {{author-name}} via DecapBridge
+  update: Update {{collection}} "{{slug}}" - {{author-name}} via DecapBridge
+  delete: Delete {{collection}} "{{slug}}" - {{author-name}} via DecapBridge
+  uploadMedia: Upload "{{path}}" - {{author-name}} via DecapBridge
+  deleteMedia: Delete "{{path}}" - {{author-name}} via DecapBridge
+
+# Enable PKCE fields
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+# Better Decap + Bridge logo
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+# Site URL
+site_url: https://wendyrodrich.cofoundy.dev
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Updated Date", name: "updatedDate", widget: "datetime", required: false }
+      - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }

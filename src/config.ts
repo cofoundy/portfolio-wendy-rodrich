@@ -29,7 +29,7 @@ export const siteConfig = {
   },
 
   aboutMe:
-    "Wendy Rodrich is a multi-brand entrepreneur and licensed esthetician with over 17 years of experience in the beauty and wellness industry.\n\nShe is the founder of <strong>IllaDerm Skin Corp</strong>, a Florida-based skincare brand and facial studio known for advanced treatments, loyal clientele, and premium service standards.\n\nWendy has built and operated successful beauty businesses in South Florida, combining hands-on expertise with strong business operations, marketing strategy, and brand development.\n\nShe is currently expanding into AI-driven marketing, e-commerce, and luxury product development, including the launch of <strong>AUREX Jewelry</strong>, a modern jewelry brand focused on accessible luxury and digital growth.\n\nWendy holds certifications in AI Marketing and Business Strategy and is focused on building scalable brands across the U.S. and Latin America.",
+    "Wendy Rodrich is a multi-brand entrepreneur and licensed esthetician with over 17 years of experience in the beauty and wellness industry.\n\nShe is the founder of <a href=\"https://illadermbeauty.com\" target=\"_blank\"><strong>IllaDerm</strong></a> — a 75% organic, vegan skincare line and facial studio based in Florida, known for advanced treatments, loyal clientele, and premium service standards.\n\nWendy has built and operated successful beauty businesses in South Florida, combining hands-on expertise with strong business operations, marketing strategy, and brand development.\n\nShe is currently expanding into AI-driven marketing, e-commerce, and luxury product development, including the launch of <strong>AUREX Jewelry</strong>, a modern jewelry brand focused on accessible luxury and digital growth.\n\nWendy holds certifications in AI Marketing and Business Strategy and is focused on building scalable brands across the U.S. and Latin America.",
 
   // Subtext below hero title
   heroSubtext: "Entrepreneur and licensed esthetician with 17+ years of experience building and operating beauty and wellness businesses in South Florida. Founder of IllaDerm Skin Corp and upcoming luxury jewelry brand AUREX. Expanding into AI-driven marketing, e-commerce, and brand development.",
@@ -58,7 +58,7 @@ export const siteConfig = {
     {
       name: "IllaDerm Skin Corp",
       description: "Natural skincare and treatment brand focused on results-driven skin health, organic formulations, and elevated, personalized client care.",
-      link: "",
+      link: "https://illadermbeauty.com",
       skills: ["Skincare", "Brand Building", "Organic Formulation"],
     },
     {

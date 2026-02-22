@@ -1,0 +1,123 @@
+---
+import { getCollection } from "astro:content";
+import { siteConfig } from "../../config";
+import "../../styles/global.css";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={`Journal by ${siteConfig.name} — beauty, skincare, and entrepreneurship.`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Journal | {siteConfig.name}</title>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+      <nav class="max-w-4xl mx-auto px-8 py-4 flex items-center justify-between">
+        <a
+          href="/"
+          class="font-bold text-lg hover:opacity-70 transition-opacity"
+          style={`color: ${siteConfig.accentColor}; font-family: 'Libre Baskerville', serif;`}
+        >
+          {siteConfig.name}
+        </a>
+        <div class="flex items-center gap-6">
+          <a
+            href="/"
+            class="text-gray-600 hover:text-black transition-colors text-sm"
+          >
+            Home
+          </a>
+          <a
+            href="/blog/"
+            class="font-medium text-sm"
+            style={`color: ${siteConfig.highlightColor};`}
+          >
+            Journal
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-8 py-16">
+      <h1 class="text-4xl font-bold mb-4" style={`color: ${siteConfig.accentColor}; font-family: 'Libre Baskerville', serif;`}>Journal</h1>
+      <div class="w-16 h-1 mb-4 rounded-full" style={`background-color: ${siteConfig.highlightColor}`}></div>
+      <p class="text-gray-600 mb-12 max-w-2xl">
+        Thoughts on beauty, skincare, entrepreneurship, and building brands that matter.
+      </p>
+
+      <div class="space-y-8">
+        {posts.map((post) => (
+          <article class="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300" style={`border-left: 4px solid ${siteConfig.highlightColor};`}>
+            <a href={`/blog/${post.id}/`} class="block group">
+              <time
+                class="text-sm text-gray-500"
+                datetime={post.data.pubDate.toISOString()}
+              >
+                {post.data.pubDate.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+              <h2
+                class="text-2xl font-semibold mt-2 mb-3 group-hover:underline"
+                style={`color: ${siteConfig.accentColor}; font-family: 'Libre Baskerville', serif;`}
+              >
+                {post.data.title}
+              </h2>
+              <p class="text-gray-600 leading-relaxed">
+                {post.data.description}
+              </p>
+              <span
+                class="inline-flex items-center gap-1 mt-4 text-sm font-medium"
+                style={`color: ${siteConfig.highlightColor};`}
+              >
+                Read more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </span>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <p class="text-gray-500 text-center py-12">
+          New articles coming soon...
+        </p>
+      )}
+    </main>
+
+    <footer class="border-t border-gray-200 py-8 mt-16">
+      <div class="max-w-4xl mx-auto px-8 text-center text-gray-500 text-sm">
+        &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
