@@ -61,8 +61,16 @@ const posts = (await getCollection("blog")).sort(
 
       <div class="space-y-8">
         {posts.map((post) => (
-          <article class="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300" style={`border-left: 4px solid ${siteConfig.highlightColor};`}>
+          <article class="bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300 overflow-hidden" style={`border-left: 4px solid ${siteConfig.highlightColor};`}>
             <a href={`/blog/${post.id}/`} class="block group">
+              {post.data.heroImage && (
+                <img
+                  src={post.data.heroImage}
+                  alt={post.data.title}
+                  class="w-full h-48 object-cover"
+                />
+              )}
+              <div class="p-8">
               <time
                 class="text-sm text-gray-500"
                 datetime={post.data.pubDate.toISOString()}
@@ -102,6 +110,7 @@ const posts = (await getCollection("blog")).sort(
                   <path d="m12 5 7 7-7 7" />
                 </svg>
               </span>
+              </div>
             </a>
           </article>
         ))}
