@@ -11,7 +11,7 @@ export const siteConfig = {
   stats: [
     { value: "17+", label: "Years in Beauty" },
     { value: "3", label: "Brands" },
-    { value: "UPenn", label: "AI Certified" },
+    { value: "DMI", label: "AI Certified" },
   ],
 
   // Hero tagline
@@ -109,6 +109,12 @@ export const siteConfig = {
 
   education: [
     {
+      school: "Digital Marketing Institute",
+      degree: "DMI Expert - AI in Digital Marketing & Business",
+      dateRange: "In Progress",
+      achievements: ["Advanced AI-driven marketing certification"],
+    },
+    {
       school: "University of Pennsylvania",
       degree: "AI for Marketing (Certificate)",
       dateRange: "2025",
@@ -125,12 +131,6 @@ export const siteConfig = {
       degree: "AI in People Management (Certificate)",
       dateRange: "2025",
       achievements: ["Wharton Online / Coursera"],
-    },
-    {
-      school: "Digital Marketing Institute",
-      degree: "DMI Expert - AI in Digital Marketing & Business",
-      dateRange: "In Progress",
-      achievements: ["Advanced AI-driven marketing certification"],
     },
     {
       school: "Professional Licenses",
