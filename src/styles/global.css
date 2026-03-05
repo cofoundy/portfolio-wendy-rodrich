@@ -349,31 +349,14 @@ body {
 }
 
 /* Premium button hover effects */
-.hero-cta {
+.hero-cta a {
   position: relative;
   overflow: hidden;
-  transition: all var(--duration-normal) var(--ease-premium);
+  transition: transform var(--duration-normal) var(--ease-premium),
+              box-shadow var(--duration-normal) var(--ease-premium);
 }
 
-.hero-cta::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s var(--ease-premium), height 0.6s var(--ease-premium);
-}
-
-.hero-cta:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-.hero-cta:hover {
+.hero-cta a:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.2);
 }
