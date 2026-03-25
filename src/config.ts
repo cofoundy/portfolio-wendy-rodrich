@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Wendy Rodrich",
-  title: "Multi-Brand Founder | Beauty, AI & Luxury E-Commerce",
-  description: "Wendy Rodrich - Multi-brand founder building scalable brands across the U.S. and Latin America. Beauty, AI marketing, and luxury e-commerce.",
+  title: "Digital Marketing & Ecommerce Strategist",
+  description: "Wendy Rodrich - Digital Marketing Strategist specializing in paid ads, ecommerce growth, and AI-driven marketing. 17+ years of business experience across beauty, wellness, and luxury brands.",
 
   // 2-color system: soft lilac (brand) + champagne gold (CTAs)
   accentColor: "#7C6A8F",
@@ -9,19 +9,19 @@ export const siteConfig = {
 
   // Hero stats (3 max, short labels)
   stats: [
-    { value: "17+", label: "Years in Beauty" },
-    { value: "3", label: "Brands" },
-    { value: "DMI", label: "AI Certified" },
+    { value: "17+", label: "Years in Business" },
+    { value: "40%", label: "Client Growth" },
+    { value: "DMI", label: "AI Marketing Certified" },
   ],
 
-  // Hero tagline
-  tagline: "Building scalable brands across the U.S. and Latin America.",
+  // Hero tagline (positioning line under title)
+  tagline: "Helping brands scale through AI-driven marketing strategy, paid advertising, and ecommerce growth.",
 
   // Location line
-  location: "Based in Florida, working across the U.S. and Latin America.",
+  location: "Based in Florida, working with clients across the U.S. and Latin America.",
 
   // CTA
-  ctaText: "Open to partnerships, collaborations, and business opportunities.",
+  ctaText: "Looking for a marketing strategist? Let's talk about growing your brand.",
 
   social: {
     email: "Wenrodrich@outlook.com",
@@ -29,80 +29,117 @@ export const siteConfig = {
   },
 
   aboutMe:
-    "Wendy Rodrich is a multi-brand entrepreneur and licensed esthetician with over 17 years of experience in the beauty and wellness industry.\n\nShe is the founder of <a href=\"https://illadermbeauty.com\" target=\"_blank\"><strong>IllaDerm</strong></a> — a 75% organic, vegan skincare line and facial studio based in Florida, known for advanced treatments, loyal clientele, and premium service standards.\n\nWendy has built and operated successful beauty businesses in South Florida, combining hands-on expertise with strong business operations, marketing strategy, and brand development.\n\nShe is currently expanding into AI-driven marketing, e-commerce, and luxury product development, including the launch of <strong>AUREX Jewelry</strong>, a modern jewelry brand focused on accessible luxury and digital growth.\n\nWendy holds certifications in AI Marketing and Business Strategy and is focused on building scalable brands across the U.S. and Latin America.",
+    "Wendy Rodrich is a Digital Marketing Strategist and entrepreneur with over 17 years of experience in business development, beauty, wellness, and luxury industries.\n\nShe specializes in AI-driven marketing strategy, paid advertising (Google Ads and Meta Ads), Shopify ecommerce growth, and CRM automation using platforms such as HubSpot.\n\nAs the founder of <a href=\"https://illadermbeauty.com\" target=\"_blank\"><strong>IllaDerm Skin Corp</strong></a> and <strong>Go & Flirt Spa</strong> in South Florida, she has implemented digital marketing campaigns that increased client acquisition and supported online sales growth through targeted advertising and customer retention strategies.",
 
   // Subtext below hero title
-  heroSubtext: "Entrepreneur and licensed esthetician with 17+ years of experience building and operating beauty and wellness businesses in South Florida. Founder of IllaDerm Skin Corp and upcoming luxury jewelry brand AUREX. Expanding into AI-driven marketing, e-commerce, and brand development.",
+  heroSubtext: "Digital Marketing Strategist with 17+ years of business experience. Certified in AI Marketing (DMI & Wharton). Specialized in Google Ads, Meta Ads, Shopify, HubSpot CRM, and ecommerce growth strategies.",
 
+  // Digital Marketing Services (displayed as highlights)
   highlights: [
-    "17+ years in beauty & wellness",
-    "Founder of IllaDerm Skin Corp",
-    "Spa owner in South Florida",
-    "Experience in AI marketing & e-commerce",
-    "Launching AUREX Jewelry",
-    "Bilingual: English & Spanish",
+    "Paid Ads Management (Google & Meta)",
+    "Ecommerce Growth Strategy (Shopify)",
+    "Email Marketing & Automation",
+    "CRM Setup & Customer Journeys (HubSpot)",
+    "Conversion Optimization & Retargeting",
+    "AI-Driven Marketing Strategy",
   ],
 
+  // Digital Marketing Skills
   skills: [
-    "Brand Building",
-    "Skincare & Wellness",
-    "E-Commerce",
-    "AI Marketing",
-    "Sales & Client Experience",
-    "Luxury Services",
-    "Product Development",
-    "Business Operations",
+    "Google Ads",
+    "Meta Ads (Facebook & Instagram)",
+    "Shopify Ecommerce",
+    "Email Marketing & Automation",
+    "HubSpot CRM",
+    "Marketing Analytics",
+    "Conversion Optimization",
+    "Retargeting & Remarketing",
   ],
 
+  // Marketing Results & Case Studies
+  caseStudies: [
+    {
+      name: "Spa Client Acquisition Campaign",
+      objective: "Grow the spa client base and increase repeat bookings.",
+      strategy: "Implemented targeted Google Ads and Meta Ads campaigns combined with referral programs and email marketing.",
+      results: [
+        "Increased client base by 40%",
+        "Increased repeat bookings through referral programs",
+        "Improved customer retention through automated email campaigns",
+      ],
+    },
+    {
+      name: "IllaDerm Ecommerce Marketing Strategy",
+      objective: "Develop a digital marketing strategy for a skincare ecommerce brand.",
+      strategy: "Built a Shopify ecommerce funnel and implemented Meta Ads retargeting campaigns to drive repeat purchases.",
+      results: [
+        "Created a structured ecommerce sales funnel",
+        "Implemented retargeting campaigns for returning customers",
+        "Strengthened brand positioning for online growth",
+      ],
+    },
+    {
+      name: "AUREX Jewelry — Digital Launch Strategy",
+      objective: "Develop the go-to-market digital strategy for a luxury ecommerce jewelry brand.",
+      strategy: "Designed Shopify ecommerce store structure, strategy, and customer acquisition funnel.",
+      results: [
+        "Built ecommerce launch strategy",
+        "Designed paid advertising structure",
+        "Developed CRM and customer journey framework",
+      ],
+    },
+  ],
+
+  // Digital Marketing Projects
   projects: [
     {
-      name: "IllaDerm Skin Corp",
-      description: "Natural skincare and treatment brand focused on results-driven skin health, organic formulations, and elevated, personalized client care.",
+      name: "IllaDerm Ecommerce Marketing Strategy",
+      description: "Built and executed the digital marketing strategy for a skincare ecommerce brand — including brand positioning, ecommerce funnel optimization, and retargeting campaigns that drive repeat purchases.",
       link: "https://illadermbeauty.com",
-      skills: ["Skincare", "Brand Building", "Organic Formulation"],
+      skills: ["Ecommerce", "Meta Ads", "Retargeting"],
     },
     {
-      name: "Go & Flirt Spa",
-      description: "Full-service spa in Lighthouse Point, FL offering 12+ treatment modalities including PRP with micro needling, permanent makeup, and advanced skincare.",
+      name: "Spa Client Acquisition Campaign",
+      description: "Designed and managed digital campaigns that increased the spa client base by 40%. Combined social media ads, referral programs, and email marketing to drive bookings and retention.",
       link: "https://goandflirt.com",
-      skills: ["Spa Management", "Aesthetics", "Client Experience"],
+      skills: ["Google Ads", "Email Marketing", "Client Retention"],
     },
     {
-      name: "AUREX Jewelry (Launching)",
-      description: "A modern luxury jewelry brand focused on accessible fine jewelry and e-commerce growth. Currently in development.",
+      name: "AUREX Jewelry — Digital Launch Strategy",
+      description: "Developing the go-to-market digital strategy for a luxury jewelry ecommerce brand — including Shopify store setup, paid ads plan, and customer journey design.",
       link: "",
-      skills: ["E-Commerce", "Product Design", "Luxury"],
+      skills: ["Shopify", "Launch Strategy", "CRM"],
     },
   ],
 
   experience: [
     {
       company: "IllaDerm Skin Corp",
-      title: "Founder",
+      title: "Founder & Marketing Strategist",
       dateRange: "2024 - Present",
       bullets: [
-        "Created a natural skincare brand focused on results-driven skin health and organic formulations",
-        "Developing luxury product line with personalized client care approach",
-        "Integrating AI-driven marketing strategies for brand growth",
+        "Built ecommerce marketing strategy including brand positioning, digital ads, and retargeting funnels",
+        "Managing Google Ads and Meta Ads campaigns driving online sales growth",
+        "Implementing HubSpot CRM for customer journey tracking and email automation",
       ],
     },
     {
       company: "Go & Flirt Spa",
-      title: "Owner & Operator",
+      title: "Owner & Digital Marketing Lead",
       dateRange: "2016 - Present",
       bullets: [
-        "10+ years managing full spa operations: marketing, brand development, client experience, and staff training",
-        "Offering 12+ skincare treatments, PRP with micro needling, permanent makeup, and aesthetic services",
-        "Built strong client base through personalized care and elevated service experiences",
+        "Increased client base by 40% through targeted digital marketing campaigns",
+        "Developed customer retention strategy increasing repeat visits through email marketing and loyalty programs",
+        "Managing paid ads (Meta & Google), social media content, and referral marketing",
       ],
     },
     {
       company: "AUREX Jewelry",
-      title: "Founder",
+      title: "Founder & Ecommerce Strategist",
       dateRange: "2025 - Present",
       bullets: [
-        "Developing modern luxury jewelry brand with digital-first e-commerce strategy",
-        "Combining product design, branding, and scalable business model",
+        "Designing digital-first go-to-market strategy with Shopify ecommerce platform",
+        "Planning paid ads campaigns and customer acquisition funnel for launch",
       ],
     },
   ],
@@ -110,27 +147,27 @@ export const siteConfig = {
   education: [
     {
       school: "Digital Marketing Institute",
-      degree: "DMI Expert - AI in Digital Marketing & Business",
-      dateRange: "In Progress",
-      achievements: ["Advanced AI-driven marketing certification"],
+      degree: "DMI Expert — AI in Digital Marketing & Business (Expected 2026)",
+      dateRange: "2026",
+      achievements: ["Advanced certification in AI-driven digital marketing strategy"],
     },
     {
-      school: "University of Pennsylvania",
+      school: "University of Pennsylvania (Wharton)",
       degree: "AI for Marketing (Certificate)",
       dateRange: "2025",
-      achievements: ["Wharton Online / Coursera"],
+      achievements: ["AI applications in marketing strategy and analytics"],
     },
     {
-      school: "University of Pennsylvania",
+      school: "University of Pennsylvania (Wharton)",
       degree: "AI in Finance (Certificate)",
       dateRange: "2025",
-      achievements: ["Wharton Online / Coursera"],
+      achievements: ["AI applications in financial strategy and business growth"],
     },
     {
-      school: "University of Pennsylvania",
+      school: "University of Pennsylvania (Wharton)",
       degree: "AI in People Management (Certificate)",
       dateRange: "2025",
-      achievements: ["Wharton Online / Coursera"],
+      achievements: ["AI applications in team management and HR strategy"],
     },
     {
       school: "Professional Licenses",
