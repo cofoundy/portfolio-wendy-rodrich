@@ -1,5 +1,8 @@
 ---
-import { siteConfig } from "../config";
+import { configs, type Lang } from "../config";
+type Props = { lang?: Lang };
+const { lang = "en" } = Astro.props as Props;
+const siteConfig = configs[lang];
 ---
 
 <section id="about" class="py-12 md:py-16 bg-white">
@@ -8,7 +11,7 @@ import { siteConfig } from "../config";
       <!-- Title -->
       <div class="lg:col-span-3 fade-in">
         <h2 class="text-3xl md:text-4xl font-bold" style={`color: ${siteConfig.accentColor}`}>
-          About Me
+          {siteConfig.ui.aboutTitle}
         </h2>
         <div class="w-16 h-1 mt-3 rounded-full" style={`background-color: ${siteConfig.highlightColor}`}></div>
       </div>
@@ -26,7 +29,7 @@ import { siteConfig } from "../config";
     <!-- Skills -->
     <div class="mt-10 pt-8 border-t fade-in" style={`border-color: ${siteConfig.accentColor}15; transition-delay: 250ms`}>
       <h3 class="text-sm font-semibold uppercase tracking-wider mb-4" style={`color: ${siteConfig.accentColor}`}>
-        Expertise
+        {siteConfig.ui.expertise}
       </h3>
       <div class="flex flex-wrap gap-2">
         {siteConfig.skills.map((skill, i) => (

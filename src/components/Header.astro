@@ -1,10 +1,17 @@
 ---
-import { siteConfig } from "../config";
+import { configs, type Lang } from "../config";
+
+type Props = { lang?: Lang };
+const { lang = "en" } = Astro.props as Props;
+const siteConfig = configs[lang];
+const other = lang === "en" ? "es" : "en";
+const otherHref = other === "en" ? "/" : "/es/";
 
 const hasCaseStudies = siteConfig.caseStudies && siteConfig.caseStudies.length > 0;
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+const t = siteConfig.ui;
 ---
 
 <header
@@ -18,45 +25,65 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
     <ul class="flex items-center gap-6">
       <li>
         <a href="#about" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}; --underline-color: ${siteConfig.highlightColor}`}>
-          About
+          {t.nav.about}
         </a>
       </li>
       {hasCaseStudies && (
         <li>
           <a href="#case-studies" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
-            Case Studies
+            {t.nav.caseStudies}
           </a>
         </li>
       )}
       {hasProjects && (
         <li>
           <a href="#projects" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
-            Ventures
+            {t.nav.ventures}
           </a>
         </li>
       )}
       {hasExperience && (
         <li>
           <a href="#experience" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
-            Experience
+            {t.nav.experience}
           </a>
         </li>
       )}
       {hasEducation && (
         <li>
           <a href="#education" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
-            Education
+            {t.nav.education}
           </a>
         </li>
       )}
       <li>
         <a href="/blog/" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
-          Journal
+          {t.nav.journal}
+        </a>
+      </li>
+      <li>
+        <a
+          href={otherHref}
+          aria-label={t.ui?.langSwitchAria ?? t.langSwitchAria}
+          class="inline-flex items-center justify-center w-10 h-7 rounded-full text-xs font-bold transition-all duration-300 hover:scale-105"
+          style={`background-color: ${siteConfig.accentColor}; color: white;`}
+        >
+          {t.langSwitch}
         </a>
       </li>
     </ul>
   </nav>
 </header>
+
+<!-- Mobile language toggle (fixed top-right, always visible) -->
+<a
+  href={otherHref}
+  aria-label={t.langSwitchAria}
+  class="md:hidden fixed top-4 right-4 z-50 inline-flex items-center justify-center w-11 h-11 rounded-full text-xs font-bold shadow-lg"
+  style={`background-color: ${siteConfig.accentColor}; color: white;`}
+>
+  {t.langSwitch}
+</a>
 
 <script>
   window.addEventListener("scroll", () => {

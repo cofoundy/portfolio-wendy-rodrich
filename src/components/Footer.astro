@@ -1,5 +1,8 @@
 ---
-import { siteConfig } from "../config";
+import { configs, type Lang } from "../config";
+type Props = { lang?: Lang };
+const { lang = "en" } = Astro.props as Props;
+const siteConfig = configs[lang];
 ---
 
 <div class="w-full h-2 accent-bar-shimmer" style={`background: linear-gradient(90deg, ${siteConfig.accentColor} 0%, ${siteConfig.highlightColor} 50%, ${siteConfig.accentColor} 100%)`}></div>
@@ -40,7 +43,7 @@ import { siteConfig } from "../config";
 
     <div class="mt-8 pt-6 border-t border-white/15 text-center fade-in" style="transition-delay: 250ms">
       <p class="text-xs text-white/50">
-        &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+        &copy; {new Date().getFullYear()} {siteConfig.name}. {siteConfig.ui.rights}
       </p>
     </div>
   </div>

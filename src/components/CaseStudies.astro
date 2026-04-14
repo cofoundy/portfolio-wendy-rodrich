@@ -1,5 +1,8 @@
 ---
-import { siteConfig } from "../config";
+import { configs, type Lang } from "../config";
+type Props = { lang?: Lang };
+const { lang = "en" } = Astro.props as Props;
+const siteConfig = configs[lang];
 const hasCaseStudies = siteConfig.caseStudies && siteConfig.caseStudies.length > 0;
 ---
 
@@ -10,7 +13,7 @@ const hasCaseStudies = siteConfig.caseStudies && siteConfig.caseStudies.length >
     <section id="case-studies" class="py-12 md:py-16 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="mb-10 fade-in">
-          <h2 class="text-3xl md:text-4xl font-bold" style={`color: ${siteConfig.accentColor}`}>Marketing Results & Case Studies</h2>
+          <h2 class="text-3xl md:text-4xl font-bold" style={`color: ${siteConfig.accentColor}`}>{siteConfig.ui.caseStudiesTitle}</h2>
           <div class="w-16 h-1 mt-3 rounded-full" style={`background-color: ${siteConfig.highlightColor}`}></div>
         </div>
 
@@ -34,15 +37,15 @@ const hasCaseStudies = siteConfig.caseStudies && siteConfig.caseStudies.length >
 
               <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
                 <div>
-                  <h4 class="text-sm font-semibold uppercase tracking-wider mb-2" style={`color: ${siteConfig.highlightColor}`}>Objective</h4>
+                  <h4 class="text-sm font-semibold uppercase tracking-wider mb-2" style={`color: ${siteConfig.highlightColor}`}>{siteConfig.ui.cs.objective}</h4>
                   <p class="text-sm text-gray-600 leading-relaxed">{cs.objective}</p>
                 </div>
                 <div>
-                  <h4 class="text-sm font-semibold uppercase tracking-wider mb-2" style={`color: ${siteConfig.highlightColor}`}>Strategy</h4>
+                  <h4 class="text-sm font-semibold uppercase tracking-wider mb-2" style={`color: ${siteConfig.highlightColor}`}>{siteConfig.ui.cs.strategy}</h4>
                   <p class="text-sm text-gray-600 leading-relaxed">{cs.strategy}</p>
                 </div>
                 <div>
-                  <h4 class="text-sm font-semibold uppercase tracking-wider mb-2" style={`color: ${siteConfig.highlightColor}`}>Results</h4>
+                  <h4 class="text-sm font-semibold uppercase tracking-wider mb-2" style={`color: ${siteConfig.highlightColor}`}>{siteConfig.ui.cs.results}</h4>
                   <ul class="space-y-1">
                     {cs.results.map((result) => (
                       <li class="text-sm text-gray-600 flex items-start gap-2">
